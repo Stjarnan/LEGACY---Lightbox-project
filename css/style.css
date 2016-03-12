@@ -78,8 +78,31 @@ Main Content
 ======================*/
 
 .wrapper {
-	width: 90%;
 	margin: 0 auto;
-	padding-top: 100px;
-	border-top: solid 1px black;
+	padding-top: 110px;
+	width: 100vw;
 }
+
+
+figure {
+	display: inline-block;
+}
+
+figcaption {
+	max-width: 200px;
+	margin: 0 auto 
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery figure {
+	flex: 1 0 200px;
+}
+
+
+
+
+
