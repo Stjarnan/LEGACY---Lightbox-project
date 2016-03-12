@@ -127,6 +127,10 @@ Media Queries
 		max-width: 200px;
 	}
 
+	figcaption {
+		display: none;
+	}
+
 } 
 
 
