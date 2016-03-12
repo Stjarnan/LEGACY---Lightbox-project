@@ -84,6 +84,7 @@ Main Content
 }
 
 
+
 figure {
 	display: inline-block;
 }
@@ -96,11 +97,55 @@ figcaption {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 565px;
+	margin: 0 auto;
 }
 
 .gallery figure {
 	flex: 1 0 200px;
 }
+
+/* =====================
+
+Media Queries
+
+======================*/
+
+
+@media (min-width: 840px) {
+	
+	input {
+		width: 460px;
+	}
+
+	.gallery {
+		max-width: 840px;
+	}
+
+
+	figure {
+		max-width: 200px;
+	}
+
+} 
+
+
+@media (min-width: 1080px) {
+
+    .gallery {
+    	max-width: 980px;
+    }
+
+	figure {
+		margin: 0 60px 60px 0;
+	}
+
+	figure:nth-child(4n) {
+		margin-right: 0;
+	}
+}
+
+
 
 
 
