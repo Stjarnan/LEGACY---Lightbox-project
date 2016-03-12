@@ -43,6 +43,10 @@ input:focus  {
 	padding: 10px;
 }
 
+input:focus {
+	outline-color: #7CFC07;
+}
+
 *::-webkit-input-placeholder {
     color: gray;
     font-weight: lighter;
