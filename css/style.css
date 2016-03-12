@@ -1,0 +1,108 @@
+
+
+/* =====================
+
+Universal Changes 
+
+======================*/
+
+* {
+	box-sizing: border-box;
+	line-height: 1.47;
+}
+
+header,
+.wrapper {
+	text-align: center;
+}
+
+/* =====================
+
+Header
+
+======================*/
+
+
+header {
+	position: fixed;
+	padding: 40px 0;
+	background-color: white;
+	z-index: 5;
+	width: 100vw;
+}
+
+input {
+	border-radius: 5px;
+	border: solid 2.5px #d3d3d3;
+}
+
+input,
+input:focus  {
+	color: gray;
+	font-size: 22px;
+	padding: 10px;
+}
+
+*::-webkit-input-placeholder {
+    color: gray;
+    font-weight: lighter;
+    padding-left: 10px;
+    display: block;
+}
+
+*:-moz-placeholder {
+    color: gray;
+    font-weight: lighter;
+    padding-left: 10px;
+    display: block;
+}
+
+*::-moz-placeholder {
+    color: gray;
+    font-weight: lighter;
+    padding-left: 10px;
+    display: block;
+}
+
+*:-ms-input-placeholder {
+   color: gray;
+   font-weight: lighter;
+   display: block;
+   padding-left: 10px;
+}
+
+/* =====================
+
+Main Content
+
+======================*/
+
+.wrapper {
+	margin: 0 auto;
+	padding-top: 110px;
+	width: 100vw;
+}
+
+
+figure {
+	display: inline-block;
+}
+
+figcaption {
+	max-width: 200px;
+	margin: 0 auto 
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery figure {
+	flex: 1 0 200px;
+}
+
+
+
+
+
