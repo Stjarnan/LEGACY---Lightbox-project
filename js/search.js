@@ -11,7 +11,7 @@ $(".search-field").keyup(function() {
         var altValue = $(this).find("img").attr("alt");
         // Hide if alt does not match with searchvalue
         if(altValue.indexOf(searchValue) === -1){
-            $(this).hide();                
+            $(this).fadeOut("slow");                
         }
     });
 });
