@@ -9,6 +9,7 @@ Universal Changes
 * {
 	box-sizing: border-box;
 	line-height: 1.47;
+	font-family: 'Raleway', sans-serif;
 }
 
 header,
@@ -49,28 +50,28 @@ input:focus {
 
 *::-webkit-input-placeholder {
     color: gray;
-    font-weight: lighter;
+    font-weight: 200;
     padding-left: 10px;
     display: block;
 }
 
 *:-moz-placeholder {
     color: gray;
-    font-weight: lighter;
+    font-weight: 200;
     padding-left: 10px;
     display: block;
 }
 
 *::-moz-placeholder {
     color: gray;
-    font-weight: lighter;
+    font-weight: 200;
     padding-left: 10px;
     display: block;
 }
 
 *:-ms-input-placeholder {
    color: gray;
-   font-weight: lighter;
+   font-weight: 200;
    display: block;
    padding-left: 10px;
 }
