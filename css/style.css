@@ -158,11 +158,15 @@ Media Queries
 	.gallery {
 		max-width: 840px;
 	}
-
+    
 
 	figure {
 		max-width: 200px;
 	}
+
+    .gallery img {
+    	cursor: pointer;
+    }
 
 	figcaption {
 		display: none;
