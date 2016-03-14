@@ -112,6 +112,34 @@ figcaption {
 
 /* =====================
 
+Lightbox
+
+======================*/
+
+
+#lightbox {
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  z-index: 6;
+}
+
+#lightbox img {
+  margin-top: 10%;
+}
+
+#lightbox p {
+	color: white;
+}
+
+
+/* =====================
+
 Media Queries
 
 ======================*/
