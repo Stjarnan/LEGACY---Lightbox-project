@@ -7,10 +7,14 @@ $(document).ready(function (){
 	  var $lightbox = $('<div id="lightbox"></div>');
 	  var $photo = $('<img>');
 	  var $photoText = $('<p></p>');
+    var $next = $('<img id="next" src="photos/next.svg">');
+    var $prev = $('<img id="prev" src="photos/prev.svg">');
 
 	  // Add the photo and phototext to the lightbox
 	  $lightbox.append($photo);
 	  $lightbox.append($photoText);
+    $lightbox.append($prev);
+    $lightbox.append($next);
 
 	  // Append the lightbox to the body
 	  $("body").append($lightbox);
@@ -26,7 +30,7 @@ $(document).ready(function (){
         // Remove thumbnails/ from the src to get hig-res photo
         var highRes = photoSrc.replace("thumbnails/", "");
 
-      	// Add the photo to the $image variable and the photoSrc to the photoText and then show the lightbox
+      	// Add the photo to the $image variable and the highRes variable to the photoText and then show the lightbox
       	$photo.attr("src", highRes);
 
       	$photoText.text(photoAlt);
