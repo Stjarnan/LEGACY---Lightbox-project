@@ -23,8 +23,12 @@ $(document).ready(function (){
       	var photoSrc = $(this).attr("src");
       	var photoAlt = $(this).attr("alt");
 
+        // Remove thumbnails/ from the src to get hig-res photo
+        var highRes = photoSrc.replace("thumbnails/", "");
+
       	// Add the photo to the $image variable and the photoSrc to the photoText and then show the lightbox
-      	$photo.attr("src", photoSrc);
+      	$photo.attr("src", highRes);
+
       	$photoText.text(photoAlt);
       	$lightbox.show();
 

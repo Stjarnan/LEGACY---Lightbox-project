@@ -10,7 +10,7 @@ $(".search-field").keyup(function() {
         // Find alt value from figure
         var altValue = $(this).find("img").attr("alt");
         // Hide if alt does not match with searchvalue
-        if(altValue.indexOf(searchValue) === -1){
+        if(altValue.toUpperCase().indexOf(searchValue.toUpperCase()) === -1){
             $(this).fadeOut("slow");                
         }
     });
