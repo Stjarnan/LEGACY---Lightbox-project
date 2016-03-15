@@ -42,27 +42,24 @@ function lightbox() {
 
         // The next and prev buttons should be clickable and show the next or prev image.
 
-
-        $("#next").click(function() {
-        // Get parent of the active image and go to next
-        var $nextParent = $($activePhoto).parent().next();
-        // Get the child of the new parent
-        var $nextPhoto = $($nextParent).children("img");
-        // Get the new src and swap the thumbnail src to high-res
-        var $newSrc = $($nextPhoto).attr("src");
-        var $newPhoto = $newSrc.replace("thumbnails/", "");
-        // Set the new photo
-        $photo.attr("src", $newPhoto);
-        // Set the new activephoto for the next time the next or prev buttons gets clicked
-        $activePhoto = $($nextParent).children("img");
+        function next(){
+                // Get parent of the active image and go to next
+            var $nextParent = $($activePhoto).parent().next();
+            // Get the child of the new parent
+            var $nextPhoto = $($nextParent).children("img");
+            // Get the new src and swap the thumbnail src to high-res
+            var $newSrc = $($nextPhoto).attr("src");
+            var $newPhoto = $newSrc.replace("thumbnails/", "");
+            // Set the new photo
+            $photo.attr("src", $newPhoto);
+            // Set the new activephoto for the next time the next or prev buttons gets clicked
+            $activePhoto = $($nextParent).children("img");
         
-
-      });
-
+        };
 
 
-        $("#prev").click( function() {
-          // Get the parent of the current image and go to prev
+           function prev(){
+              // Get the parent of the current image and go to prev
           var $prevParent = $($activePhoto).parent().prev();
           // Get the child of the new parent
           var $prevPhoto = $($prevParent).children("img");
@@ -73,6 +70,19 @@ function lightbox() {
           $photo.attr("src", $newPhoto);
           // Set the new activephoto for the next time the prev or next buttons gets clicked
           $activePhoto = $prevParent.children("img");
+           };
+
+
+        $("#next").click(function() {
+              
+              next();        
+
+      });
+
+
+
+        $("#prev").click( function() {
+            prev();
         });
 
 
@@ -81,34 +91,14 @@ function lightbox() {
 
        $("#lightbox").keydown(function(k) {
            if(k.keyCode == 39){
-                    // Get parent of the active image and go to next
-                var $nextParent = $($activePhoto).parent().next();
-                // Get the child of the new parent
-                var $nextPhoto = $($nextParent).children("img");
-                // Get the new src and swap the thumbnail src to high-res
-                var $newSrc = $($nextPhoto).attr("src");
-                var $newPhoto = $newSrc.replace("thumbnails/", "");
-                // Set the new photo
-                $photo.attr("src", $newPhoto);
-                // Set the new activephoto for the next time the next or prev buttons gets clicked
-                $activePhoto = $($nextParent).children("img");
+                next();
            }
        });
 
 
       $("#lightbox").keydown(function(k) {
         if(k.keyCode == 37) {
-          // Get the parent of the current image and go to prev
-          var $prevParent = $($activePhoto).parent().prev();
-          // Get the child of the new parent
-          var $prevPhoto = $($prevParent).children("img");
-          // Get the new src and swap the thumbnail to high-res
-          var $newSrc = $($prevPhoto).attr("src");
-          var $newPhoto = $newSrc.replace("thumbnails/", "");
-          // Set the new photo
-          $photo.attr("src", $newPhoto);
-          // Set the new activephoto for the next time the prev or next buttons gets clicked
-          $activePhoto = $prevParent.children("img");
+          prev();
         }
       });
 
