@@ -57,7 +57,7 @@ function lightbox() {
             // Set the new activephoto for the next time the next or prev buttons gets clicked
             $activePhoto = $($nextParent).children("img");
         
-        };
+        }
 
 
            function prev(){
@@ -74,7 +74,7 @@ function lightbox() {
           $photoText.text($newAlt);
           // Set the new activephoto for the next time the prev or next buttons gets clicked
           $activePhoto = $prevParent.children("img");
-           };
+           }
 
 
         $("#next").click(function() {
