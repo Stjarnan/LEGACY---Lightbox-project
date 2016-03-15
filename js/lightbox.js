@@ -43,15 +43,17 @@ function lightbox() {
         // The next and prev buttons should be clickable and show the next or prev image.
 
         function next(){
-                // Get parent of the active image and go to next
+                // Get parent of the active image/alt and go to next
             var $nextParent = $($activePhoto).parent().next();
             // Get the child of the new parent
             var $nextPhoto = $($nextParent).children("img");
-            // Get the new src and swap the thumbnail src to high-res
+            // Get the new src/alt and swap the thumbnail src to high-res
             var $newSrc = $($nextPhoto).attr("src");
+            var $newAlt = $($nextPhoto).attr("alt");
             var $newPhoto = $newSrc.replace("thumbnails/", "");
-            // Set the new photo
+            // Set the new photo/alt
             $photo.attr("src", $newPhoto);
+            $photoText.text($newAlt);
             // Set the new activephoto for the next time the next or prev buttons gets clicked
             $activePhoto = $($nextParent).children("img");
         
@@ -59,15 +61,17 @@ function lightbox() {
 
 
            function prev(){
-              // Get the parent of the current image and go to prev
+              // Get the parent of the current image/alt and go to prev
           var $prevParent = $($activePhoto).parent().prev();
           // Get the child of the new parent
           var $prevPhoto = $($prevParent).children("img");
-          // Get the new src and swap the thumbnail to high-res
+          // Get the new src/alt and swap the thumbnail to high-res
           var $newSrc = $($prevPhoto).attr("src");
+          var $newAlt = $($prevPhoto).attr("alt");
           var $newPhoto = $newSrc.replace("thumbnails/", "");
-          // Set the new photo
+          // Set the new photo/alt
           $photo.attr("src", $newPhoto);
+          $photoText.text($newAlt);
           // Set the new activephoto for the next time the prev or next buttons gets clicked
           $activePhoto = $prevParent.children("img");
            };
