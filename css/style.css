@@ -141,19 +141,7 @@ Lightbox
 	margin: 5% auto;
 }
 
-#prev,
-#next {
-	position: absolute;
-	top: 20%;
-}
 
-#prev {
-	left: 15%;
-}
-
-#next {
-	right: 15%;
-}
 
 /* =====================
 
@@ -185,6 +173,23 @@ Media Queries
 		display: none;
 	}
 
+	#prev,
+	#next {
+		position: absolute;
+		top: 58%;
+		cursor: pointer;
+		z-index: 10;
+		display: none;
+	}
+
+	#prev {
+		left: 25%;
+	}
+
+	#next {
+		right: 25%;
+	}
+
 } 
 
 @media (min-width: 1080px) {
@@ -200,11 +205,69 @@ Media Queries
 	figure:nth-child(4n) {
 		margin-right: 0;
 	}
+
+	#prev,
+	#next {
+		top: 25%;
+	}
+
+	#prev {
+	    left: 5%;
+	}
+
+	#next {
+		right: 5%;
+	}
 }
 
+/* Resetting the arrows every now and then to keep them close enough to the lightbox image */
 
+@media (min-width: 1300px) {
 
+	#prev,
+	#next {
+		top: 25%;
+	}
 
+	#prev {
+		left: 12%;
+	}
 
+	#next {
+		right: 12%;
+	}
+}
+
+@media (min-width: 1550px) {
+
+	#prev,
+	#next {
+		top: 30%;
+	}
+
+	#prev {
+		left: 19%;
+	}
+
+	#next {
+		right: 19%;
+	}
+}
+
+@media (min-width: 2350px) {
+
+	#prev,
+	#next {
+		top: 35%;
+	}
+
+	#prev {
+		left: 28%;
+	}
+
+	#next {
+		right: 28%;
+	}
+}
 
 
