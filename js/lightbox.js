@@ -19,9 +19,10 @@ function lightbox() {
       // Show lightbox on image-click
       $(".gallery img").click(function() {
         
-        // Show arrows
+        // Show arrows and close icon
           $("#next").show();
           $("#prev").show();
+          $("#close").show();
 
       	// Get the clicked photos src and alt
       	var photoSrc = $(this).attr("src");
@@ -76,7 +77,7 @@ function lightbox() {
           $activePhoto = $prevParent.children("img");
            }
 
-
+        
         $("#next").click(function() {
               
               next();        
@@ -89,7 +90,9 @@ function lightbox() {
             prev();
         });
 
-
+        $("#close").click(function(){
+          closeLightbox();
+        });
 
      // Make the same functions work on keypress (Right or left arrows)
 
@@ -106,7 +109,12 @@ function lightbox() {
         }
       });
 
-
+      // Close lightbox on keystroke 
+      $("#lightbox").keydown(function(k) {
+        if(k.keyCode == 27) {
+          closeLightbox();
+        }
+      });
 
 
 
@@ -114,11 +122,17 @@ function lightbox() {
 
       });
 
+          // Function to exit lightbox
+          function closeLightbox(){
+            $("#lightbox").hide();
+            $("#next").hide();
+            $("#prev").hide();
+          }
+
+
       // Hide the lightbox when clicked
       $("#lightbox").click(function(){
-      	$("#lightbox").hide();
-        $("#next").hide();
-        $("#prev").hide();
+      	closeLightbox();
       });      
 	   
 
