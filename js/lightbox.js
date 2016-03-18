@@ -1,4 +1,11 @@
 
+// Function to exit lightbox
+          function closeLightbox(){
+            $("#lightbox").hide();
+            $("#next").hide();
+            $("#prev").hide();
+          }
+
 function lightbox() {
 	// The lightbox should only be used at bigger screens
 	if ( $(window).width() >= 840) {     
@@ -122,12 +129,6 @@ function lightbox() {
 
       });
 
-          // Function to exit lightbox
-          function closeLightbox(){
-            $("#lightbox").hide();
-            $("#next").hide();
-            $("#prev").hide();
-          }
 
 
       // Hide the lightbox when clicked
