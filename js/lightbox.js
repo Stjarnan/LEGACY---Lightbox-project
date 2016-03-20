@@ -46,21 +46,28 @@ function lightbox() {
       	$lightbox.show();
         $lightbox.focus();
 
+        // declaring the variables for later use in the functions below
         var $activePhoto = $(this);
-
+        var $nextParent;
+        var $nextPhoto;
+        var $newSrc;
+        var $newAlt;
+        var $newPhoto;
+        var $prevParent;
+        var $prevPhoto;
 
         // The next and prev buttons should be clickable and show the next or prev image.
 
         function next(){
           if ($($activePhoto).parent().hasClass("last")) {
                 // Get parent of the active image/alt and go to next
-            var $nextParent = $($activePhoto).parent().siblings().first();
+             $nextParent = $($activePhoto).parent().siblings().first();
             // Get the child of the new parent
-            var $nextPhoto = $($nextParent).children("img");
+             $nextPhoto = $($nextParent).children("img");
             // Get the new src/alt and swap the thumbnail src to high-res
-            var $newSrc = $($nextPhoto).attr("src");
-            var $newAlt = $($nextPhoto).attr("alt");
-            var $newPhoto = $newSrc.replace("thumbnails/", "");
+             $newSrc = $($nextPhoto).attr("src");
+             $newAlt = $($nextPhoto).attr("alt");
+             $newPhoto = $newSrc.replace("thumbnails/", "");
             // Set the new photo/alt
             $photo.attr("src", $newPhoto);
             $photoText.text($newAlt);
@@ -69,13 +76,13 @@ function lightbox() {
           } 
           else {
                // Get parent of the active image/alt and go to next
-            var $nextParent = $($activePhoto).parent().next();
+            $nextParent = $($activePhoto).parent().next();
             // Get the child of the new parent
-            var $nextPhoto = $($nextParent).children("img");
+             $nextPhoto = $($nextParent).children("img");
             // Get the new src/alt and swap the thumbnail src to high-res
-            var $newSrc = $($nextPhoto).attr("src");
-            var $newAlt = $($nextPhoto).attr("alt");
-            var $newPhoto = $newSrc.replace("thumbnails/", "");
+             $newSrc = $($nextPhoto).attr("src");
+             $newAlt = $($nextPhoto).attr("alt");
+             $newPhoto = $newSrc.replace("thumbnails/", "");
             // Set the new photo/alt
             $photo.attr("src", $newPhoto);
             $photoText.text($newAlt);
@@ -91,13 +98,13 @@ function lightbox() {
               
           if ($($activePhoto).parent().hasClass("first")) {
             // Get the parent of the current image/alt and go to prev
-            var $prevParent = $($activePhoto).parent().siblings().last();
+             $prevParent = $($activePhoto).parent().siblings().last();
             // Get the child of the new parent
-            var $prevPhoto = $($prevParent).children("img");
+            $prevPhoto = $($prevParent).children("img");
             // Get the new src/alt and swap the thumbnail to high-res
-            var $newSrc = $($prevPhoto).attr("src");
-            var $newAlt = $($prevPhoto).attr("alt");
-            var $newPhoto = $newSrc.replace("thumbnails/", "");
+             $newSrc = $($prevPhoto).attr("src");
+             $newAlt = $($prevPhoto).attr("alt");
+             $newPhoto = $newSrc.replace("thumbnails/", "");
             // Set the new photo/alt
             $photo.attr("src", $newPhoto);
             $photoText.text($newAlt);
@@ -106,13 +113,13 @@ function lightbox() {
           }
             else {
               // Get the parent of the current image/alt and go to prev
-            var $prevParent = $($activePhoto).parent().prev();
+            $prevParent = $($activePhoto).parent().prev();
             // Get the child of the new parent
-            var $prevPhoto = $($prevParent).children("img");
+            $prevPhoto = $($prevParent).children("img");
             // Get the new src/alt and swap the thumbnail to high-res
-            var $newSrc = $($prevPhoto).attr("src");
-            var $newAlt = $($prevPhoto).attr("alt");
-            var $newPhoto = $newSrc.replace("thumbnails/", "");
+             $newSrc = $($prevPhoto).attr("src");
+             $newAlt = $($prevPhoto).attr("alt");
+             $newPhoto = $newSrc.replace("thumbnails/", "");
             // Set the new photo/alt
             $photo.attr("src", $newPhoto);
             $photoText.text($newAlt);
