@@ -140,11 +140,36 @@ Lightbox
 
 #lightbox p {
 	color: white;
-	width: 600px;
+	width: 80%;
 	margin: 5% auto;
 }
 
+.gallery img {
+    	cursor: pointer;
+    }
 
+#prev,
+#next,
+#close {
+		position: fixed;
+		top: 150px;
+		cursor: pointer;
+		z-index: 10;
+		display: none;
+	}   
+
+#prev {
+		left: 1%;
+	}
+
+#next {
+		right: 1%;
+	}
+
+#close {
+		top: 0;
+		right: 0;
+	}
 
 /* =====================
 
@@ -168,35 +193,17 @@ Media Queries
 		max-width: 200px;
 	}
 
-    .gallery img {
-    	cursor: pointer;
-    }
+    .lightbox p {
+    	width: 600px;
+    } 
 
 	figcaption {
 		display: none;
 	}
 
 	#prev,
-	#next,
-	#close {
-		position: fixed;
-		top: 25%;
-		cursor: pointer;
-		z-index: 10;
-		display: none;
-	}
-
-	#prev {
-		left: 4%;
-	}
-
 	#next {
-		right: 4%;
-	}
-
-	#close {
-		top: 0;
-		right: 0;
+		top: 25%;
 	}
 
 } 
@@ -225,6 +232,14 @@ Media Queries
     #prev,
     #next {
     	top: 35%;
+    }
+
+    #prev {
+    	left: 7%;
+    }
+
+    #next {
+    	right: 7%;
     }
 }
 

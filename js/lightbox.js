@@ -4,11 +4,12 @@
             $("#lightbox").hide();
             $("#next").hide();
             $("#prev").hide();
+            $("#close").hide();
           }
 
 function lightbox() {
 	// The lightbox should only be used at bigger screens
-	if ( $(window).width() >= 840) {     
+	   
 	  
 	  // Create variables for easier use later
 	  var $lightbox = $('<div tabindex="0" id="lightbox"></div>');
@@ -137,7 +138,7 @@ function lightbox() {
       });      
 	   
 
-	}
+	
 }
 
 
@@ -146,13 +147,7 @@ $(document).ready(function(){
   lightbox();
 });
 
-// Check if the function should run after user-resize
-$(window).resize(function(){
-  $("#lightbox").remove();
-  $("#next").hide();
-  $("#prev").hide();
-  lightbox();
-});
+
 
 
 
